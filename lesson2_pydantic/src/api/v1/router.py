@@ -5,7 +5,6 @@ from fastapi import APIRouter
 from lesson2_pydantic.src.api.schemas.response_schemas import PostResponseSchema
 from lesson2_pydantic.src.api.schemas.user_schema import UserSchema
 from lesson2_pydantic.src.infrastructure.repositiries.list_user_repository import list_user_repository
-from lesson2_pydantic.src.core.use_cases.create_user_usecase import CreateUserUseCase
 
 users_router = APIRouter(prefix="/users", tags=["users"])
 
@@ -17,8 +16,7 @@ users_router = APIRouter(prefix="/users", tags=["users"])
              )
 def create_user(user: UserSchema) -> PostResponseSchema:
     try:
-        create_user_use_case = CreateUserUseCase(list_user_repository)
-        create_user_use_case.execute(user)
+        list_user_repository.add_user(user)
         response = PostResponseSchema(status=True, msg="User created successfully.")
     except Exception as e:
         response = PostResponseSchema(status=False, msg=str(e))
