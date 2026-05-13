@@ -21,7 +21,7 @@ async def lifespan(app: FastAPI):
     # close DB connection etc
 
 app = FastAPI(
-        title="Clean Architecture API",
+        title="Lesson1 API",
         lifespan=lifespan
     )
 app.include_router(book_router, prefix="/api/v1")

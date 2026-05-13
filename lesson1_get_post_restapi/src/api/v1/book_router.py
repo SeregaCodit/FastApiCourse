@@ -9,7 +9,7 @@ from lesson1_get_post_restapi.src.core.use_cases.get_book_use_case import GetAll
 from lesson1_get_post_restapi.src.api.schemas.book_reuest import BookCreateRequest
 
 
-router = APIRouter(prefix="/book", tags=["books"])
+router = APIRouter(prefix="/books", tags=["books"])
 
 create_book_use_case = CreateBookUseCase(book_storage)
 get_all_books_use_case = GetAllBooksUseCase(book_storage)
