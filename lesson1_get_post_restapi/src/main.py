@@ -3,9 +3,9 @@ import uvicorn
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 
-from src.api.v1.book_router import router as book_router
-from src.infrastructure.repositories.book_repository import book_storage
-from src.core.entities.book import Book
+from lesson1_get_post_restapi.src.api.v1.book_router import router as book_router
+from lesson1_get_post_restapi.src.infrastructure.repositories.book_repository import book_storage
+from lesson1_get_post_restapi.src.core.entities.book import Book
 
 
 @asynccontextmanager

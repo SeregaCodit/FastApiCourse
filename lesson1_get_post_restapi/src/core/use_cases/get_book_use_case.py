@@ -1,7 +1,7 @@
 from typing import List
 
-from src.core.entities.book import Book
-from src.core.interfaces.book_repository import IBookRepository
+from lesson1_get_post_restapi.src.core.entities.book import Book
+from lesson1_get_post_restapi.src.core.interfaces.book_repository import IBookRepository
 
 
 class GetAllBooksUseCase:

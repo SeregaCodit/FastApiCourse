@@ -1,4 +1,4 @@
-from src.core.entities.book import Book
+from lesson1_get_post_restapi.src.core.entities.book import Book
 
 
 class BookCreator:

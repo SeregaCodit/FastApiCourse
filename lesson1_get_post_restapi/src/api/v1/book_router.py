@@ -2,11 +2,11 @@ from typing import List
 
 from fastapi import APIRouter, HTTPException
 
-from src.core.entities.book import Book
-from src.infrastructure.repositories.book_repository import book_storage
-from src.core.use_cases.create_book_use_case import CreateBookUseCase
-from src.core.use_cases.get_book_use_case import GetAllBooksUseCase
-from src.api.schemas.book_reuest import BookCreateRequest
+from lesson1_get_post_restapi.src.core.entities.book import Book
+from lesson1_get_post_restapi.src.infrastructure.repositories.book_repository import book_storage
+from lesson1_get_post_restapi.src.core.use_cases.create_book_use_case import CreateBookUseCase
+from lesson1_get_post_restapi.src.core.use_cases.get_book_use_case import GetAllBooksUseCase
+from lesson1_get_post_restapi.src.api.schemas.book_reuest import BookCreateRequest
 
 
 router = APIRouter(prefix="/book", tags=["books"])
